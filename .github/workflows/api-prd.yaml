@@ -1,4 +1,4 @@
-name: dEURO API PRD CI/CD
+name: cUSD API PRD CI/CD
 
 on:
   push:
@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_TAGS: dfxswiss/deuro-api:latest
+  DOCKER_TAGS: dfxswiss/cusd-api:latest
   AZURE_RESOURCE_GROUP: rg-dfx-api-prd
-  AZURE_CONTAINER_APP: ca-dfx-dea-prd
+  AZURE_CONTAINER_APP: ca-dfx-cdta-prd
   DEPLOY_INFO: ${{ github.ref_name }}-${{ github.sha }}
 
 jobs:
@@ -53,3 +53,4 @@ jobs:
         run: |
           az logout
         if: always()
+
